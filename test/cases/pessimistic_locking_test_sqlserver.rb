@@ -77,8 +77,6 @@ class PessimisticLockingTestSqlserver < ActiveRecord::TestCase
   
   context 'For dueling concurrent connections' do
     
-    use_concurrent_connections
-
     should 'no locks does not wait' do
       first, second = duel { Person.find 1 }
       assert first.end > second.end
