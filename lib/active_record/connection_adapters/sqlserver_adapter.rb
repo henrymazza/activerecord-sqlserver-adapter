@@ -9,6 +9,7 @@ require 'active_record/connection_adapters/sqlserver/schema_statements'
 require 'active_record/connection_adapters/sqlserver/quoting'
 require 'active_support/core_ext/kernel/requires'
 require 'active_support/core_ext/string'
+require 'arel/visitors/sqlserver_visitor'
 require 'base64'
 
 module ActiveRecord
