@@ -28,9 +28,6 @@ module Arel
           ("WHERE #{relation.wheres.collect(&:to_sql).join(' AND ')}" unless relation.wheres.blank? )
       end
       
-      
-      protected
-      
       def complex_count_sql?
         projections = relation.projections
         projections.first.is_a?(Arel::Count) && projections.size == 1 &&
