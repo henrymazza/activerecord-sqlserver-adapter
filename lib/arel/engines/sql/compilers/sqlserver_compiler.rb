@@ -214,6 +214,7 @@ module Arel
             existing_columns[table] << column
             queued_orders << order 
           end
+          puts queued_orders
           queued_orders
         end
       end
